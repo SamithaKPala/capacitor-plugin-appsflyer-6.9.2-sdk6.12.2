@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "appsflyer-capacitor-plugin",
   "version": "6.9.2",
   "iosSdkVersion": "6.9.0",
@@ -48,7 +49,6 @@
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "prepare": "npm run build",
     "rimraf": "./node_modules/rimraf/bin.js"
   },
   "devDependencies": {
