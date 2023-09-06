@@ -320,20 +320,20 @@ class AppsFlyerPlugin : Plugin() {
 
         }
 
-        val listener = object : CreateOneLinkHttpTask.ResponseListener {
-            override fun onResponse(s: String?) {
-                val obj = JSObject().apply {
-                    put(AF_LINK_READY, s)
-                }
-                call.resolve(obj)
-            }
+//        val listener = object : CreateOneLinkHttpTask.ResponseListener {
+////            override fun onResponse(s: String?) {
+////                val obj = JSObject().apply {
+////                    put(AF_LINK_READY, s)
+////                }
+////                call.resolve(obj)
+////            }
+//
+////            override fun onResponseError(s: String?) {
+////                call.reject(s)
+////            }
+//        }
 
-            override fun onResponseError(s: String?) {
-                call.reject(s)
-            }
-        }
-
-        linkGenerator.generateLink(context, listener)
+//        linkGenerator.generateLink(context, listener)
     }
 
     @PluginMethod
